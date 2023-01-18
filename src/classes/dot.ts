@@ -17,9 +17,9 @@ export class Dot {
   pulseBackIterator: number = 0;
   isFrozen: boolean;
   canMove: boolean = true;
-  zigzagExtent = this.randomIntFromInterval(8,10)
-  pulseForwardExtent = this.randomIntFromInterval(49,50)
-  pulseBackExtent = this.randomIntFromInterval(-9,-10)
+  zigzagExtent = this.randomIntFromInterval(14,20)
+  pulseForwardExtent = this.randomIntFromInterval(43,50)
+  pulseBackExtent = this.randomIntFromInterval(-7,-10)
 
   constructor(
     public xCoordinate = 100,
