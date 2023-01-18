@@ -1,0 +1,71 @@
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: black;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-container {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: black;
+}
+
+.example-sidenav {
+  user-select: none;
+  opacity: 0.5;
+  height: 80%;
+  width: 100%;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.largeText {
+  font-size: 120%;
+}
+
+.spacer {
+    padding: 12px;
+}
+
+.thinspacer {
+    padding: 1%;
+}
+
+.Title {
+  color: rgb(8, 75, 22);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  margin-left: 0px;
+  white-space: break-spaces;
+  font-weight: 500;
+  padding-left: 35px;
+  padding-right: 40px;
+  padding-top: 40px;
+}
+
+.imageTransparency {
+  opacity: 0.4;
+  zoom: 95%;
+  padding-top: 55px;
+}
+
+.ImageContainer {
+  position: relative;
+}
+
+.textboxAlignment {
+  position: absolute;
+  top: 10%;
+}
+

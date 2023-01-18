@@ -1,0 +1,118 @@
+<mat-toolbar>
+  <button mat-button class="menu-button" (click)="sidenav.toggle()">
+    <mat-icon>{{ isMenuOpen ? "menu_open" : "menu" }}</mat-icon>
+  </button>
+  <span>
+    <div class="ImageContainer">
+      <img src="assets/dots.png" class="imageTransparency" />
+      <div class="textboxAlignment">
+        <p class="Title">Completely Dotty</p>
+      </div>
+    </div>
+  </span>
+  <!-- <span>Completely Dotty</span> -->
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container" autosize hasBackdrop="false">
+  <mat-sidenav
+    #sidenav
+    autoFocus="false"
+    mode="over"
+    [(opened)]="isMenuOpen"
+    class="example-sidenav"
+    (click)="onSidenavClick()"
+  >
+    <section>
+      <div class="center-button">
+        <button
+          mat-raised-button
+          (click)="releaseTheDots()"
+          class="largeText"
+        >
+          Release the dots!
+        </button>
+      </div>
+    </section>
+
+    <mat-list-item class="thinspacer">Wall bounce direction</mat-list-item>
+
+    <mat-button-toggle-group [value]="selectedDirection"
+      fxLayoutAlign="center center"
+      style="flex-wrap: wrap"
+    >
+      <mat-button-toggle
+        *ngFor="let direction of directions"
+        (change)="changeDirection($event.value)"
+        style="width: inherit"
+        style="border-color: azure"
+        value="{{ direction }}"
+        >{{ direction }}</mat-button-toggle
+      >
+    </mat-button-toggle-group>
+
+    <div class="spacer"></div>
+
+    <mat-list-item class="thinspacer"
+    >Collision behaviour</mat-list-item>
+
+    <mat-button-toggle-group [value]="selectedCollision"
+      fxLayoutAlign="center center"
+      style="flex-wrap: wrap"
+    >
+      <mat-button-toggle
+        *ngFor="let collision of collisions"
+        (change)="changeCollision($event.value)"
+        style="width: inherit"
+        style="border-color: azure"
+        value="{{collision}}"
+        >{{ collision }}</mat-button-toggle
+      >
+    </mat-button-toggle-group>
+
+    <div class="spacer"></div>
+
+    <mat-list-item class="thinspacer">Movement behaviour</mat-list-item>
+
+    <mat-button-toggle-group [value]="selectedMovement"
+      fxLayoutAlign="center center"
+      style="flex-wrap: wrap"
+    >
+      <mat-button-toggle
+        *ngFor="let movement of movements"
+        (change)="changeMovement($event.value)"
+        style="width: inherit"
+        style="border-color: azure"
+        value="{{ movement }}"
+        >{{ movement }}</mat-button-toggle
+      >
+    </mat-button-toggle-group>
+
+    <div class="spacer"></div>
+
+    <section>
+      <div class="center-button">
+        <mat-button-toggle
+        (click)="freezeDots()"
+        class="matButtonOverride"
+        >
+        Freeze the dots
+        </mat-button-toggle>
+      </div>
+    </section>
+
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="canvas-container">
+      <canvas #myCanvas style="background-color: rgb(0, 0, 0)"> </canvas>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
