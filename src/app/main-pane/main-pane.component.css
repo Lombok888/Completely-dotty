@@ -20,7 +20,7 @@
 .example-sidenav {
   user-select: none;
   opacity: 0.5;
-  height: 80%;
+  height: 100%;
   width: 100%;
 }
 
