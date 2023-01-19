@@ -4,6 +4,9 @@ A snow globe for the digital age, Pong on steroids...
 Completely Dotty is a demonstration of how a small amount of OO logic and some fast bitmap rendering can create quite a lot of complexity.
 Experiment with the options to make the dots do crazy things!
 
+Hosted as a Static Web App with CI on Azure:-
+https://nice-moss-0e26e3703.2.azurestaticapps.net
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 ## Development server
