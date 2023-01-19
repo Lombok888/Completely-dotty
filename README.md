@@ -1,5 +1,9 @@
 # CompletelyDotty
 
+A snow globe for the digital age, Pong on steroids...
+Completely Dotty is a demonstration of how a small amount of OO logic and some fast bitmap rendering can create quite a lot of complexity.
+Experiment with the options to make the dots do crazy things!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 ## Development server
